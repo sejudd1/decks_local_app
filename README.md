@@ -1,2 +1,2 @@
-##Decks locals app
+##Decks local app
 
