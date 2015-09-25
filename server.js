@@ -1,4 +1,4 @@
-var express = require('express'), 
+var express = require('express'),
 	app = express(),
 	bodyParser = require('body-parser'),
 	morgan = require('morgan'),
@@ -16,7 +16,7 @@ app.use(morgan( 'dev' ))
 
 
 //Steak sauce
-
+// Add beesknees
 //banana
 
 //Routes
@@ -41,12 +41,3 @@ app.use(morgan( 'dev' ))
 //Run server
 app.listen(8080)
 console.log('Magic is happening on port 8080')
-
-
-
-
-
-
-
-
-	
