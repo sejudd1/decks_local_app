@@ -15,11 +15,6 @@ app.use(bodyParser.json());
 app.use(morgan( 'dev' ))
 
 
-//Steak sauce
-//Add beesknees
-//banana
-//Germany soccer rulz!
-
 //Routes
 
 //Create a router for the API
