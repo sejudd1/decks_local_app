@@ -4,6 +4,7 @@ var express = require('express'),
 	morgan = require('morgan'),
 	mongoose = require( 'mongoose' ),
 	Shop = require( './app/models/Shop.js' );
+	Board = require( './app/models/Board.js' );
 	// Deck = require( './app/models/Deck.js' );
 
 	mongoose.connect( 'localhost:27017/decks_local_app' )
@@ -14,7 +15,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(morgan( 'dev' ))
 
- 
+
 
 //Routes
 
