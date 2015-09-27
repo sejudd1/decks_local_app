@@ -25,7 +25,7 @@ apiRouter.route('boards/:boards_id')
 	.put(boardsController.update)
 
 	//this is the desstroy function
-	.delete(usersController.destroy)
+	.delete(boardsController.destroy)
 
 module.exports = apiRouter
 
