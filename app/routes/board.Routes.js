@@ -28,5 +28,3 @@ apiRouter.route('boards/:boards_id')
 	.delete(usersController.destroy)
 
 module.exports = apiRouter
-
-

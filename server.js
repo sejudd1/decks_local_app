@@ -3,9 +3,11 @@ var express = require('express'),
 	bodyParser = require('body-parser'),
 	morgan = require('morgan'),
 	mongoose = require( 'mongoose' ),
-	Shop = require( './app/models/Shop.js' );
-	Board = require( './app/models/Board.js' );
-	// Deck = require( './app/models/Deck.js' );
+	Shop = require( './app/models/Shop.js' ),
+	Board = require( './app/models/Board.js' ),
+	apiRouter = require( './app/routes/boardRoutes.js' ),
+	apiRouter = require( './app/routes/shopRoutes.js' );
+
 
 	mongoose.connect( 'localhost:27017/decks_local_app' )
 
