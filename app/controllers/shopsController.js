@@ -1,21 +1,25 @@
 var Shop = require("../models/Shop")
 
-function index(req, res){
-	Shop.find(function(err,users){
-		if(err) res.send(err)
-		res.json(users)
-	})
+
+function index( req, res){
+	Shop.find( function( err, shops){
+		if ( err ) {
+			res.send( err )
+		} else {
+			res.json( shops )
+		}
+	});
 }
 
 
 function create( req, res ) {
   // make a new, empty user
   var shop          = new Shop()
-  user.shopname     = req.body.shopname
-  user.street       = req.body.street
-  user.city         = req.body.city
-  user.phonenumber  = req.body.phonenumber
-  user.hours        = req.body.hours
+  shop.shopname     = req.body.shopname
+  shop.street       = req.body.street
+  shop.city         = req.body.city
+  shop.phonenumber  = req.body.phonenumber
+  shop.hours        = req.body.hours
 
   //try to save this shop to db
   shop.save(function( err ){

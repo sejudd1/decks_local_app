@@ -5,8 +5,8 @@ var express = require('express'),
 	mongoose = require( 'mongoose' ),
 	Shop = require( './app/models/Shop.js' ),
 	Board = require( './app/models/Board.js' ),
-	apiRouter = require( './app/routes/boardRoutes.js' ),
-	apiRouter = require( './app/routes/shopRoutes.js' );
+	apiRouter = require( './app/routes/board.Routes.js' ),
+	apiRouter2 = require( './app/routes/shop.Routes.js' );
 
 
 	mongoose.connect( 'localhost:27017/decks_local_app' )

@@ -1,11 +1,12 @@
 var express = require( 'express' ),
-    apiRouter = express.Router(),
+    apiRouter2 = express.Router(),
     shopsController = require( '../controllers/shopsController.js'),
     Shop = require( '../models/Shop.js');
 
 apiRouter.use(function( req, res, next ){
   // DO AUTHENTICATION HERE!
   console.log('Someone is using our API');
+
 
   next()
 });
@@ -24,7 +25,6 @@ apiRouter.route( '/shops/:shop_id')
 .put( shopsController.update )
 
 // thi is the destroy function
-.delete( shopsController )
+.delete( shopsController.destroy )
 
-
-module.exports = apiRouter
+module.exports = apiRouter2
