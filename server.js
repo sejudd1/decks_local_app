@@ -16,25 +16,8 @@ app.use(bodyParser.json());
 app.use(morgan( 'dev' ))
 
 
-
-//Routes
-
-//Create a router for the API
-//set index for api router
-// var apiRouter = express.Router();
-
-// apiRouter.route('/shops')
-// 	.get(function(req, res){
-// 		Shop.find( function(err , shops ){
-// 			if ( err ) {
-// 				res.send( err )
-// 			}
-// 			res.json(users)
-// 		})
-// 	})
-
-//tell app to use API route when we go to localhost:8080/api
-
+// tell app to use apiRoute when we go to the localhost:8080/api
+app.use('/api', apiRouter)
 
 //Run server
 app.listen(8080)
