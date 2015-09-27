@@ -7,7 +7,8 @@ var ShopSchema = new Schema({
 	street: { type: String, required: true},
 	city: { type: String, required: true },
 	phonenumber: String,
-	hours: String
+	hours: String,
+	boards: [ 'BoardSchema' ]
 
 
 })
