@@ -1,6 +1,6 @@
 var express = require( 'express' ),
     apiRouter = express.Router(),
-    shopController = require( '../controllers/shopController.js'),
+    shopsController = require( '../controllers/shopsController.js'),
     Shop = require( '../models/Shop.js');
 
 apiRouter.use(function( req, res, next ){
@@ -12,19 +12,19 @@ apiRouter.use(function( req, res, next ){
 
 // set up index/get for api router
 apiRouter.route( '/shops' )
-.get( shopController.index )
+.get( shopsController.index )
 // for creating a new shop
-.post( shopController.create )
+.post( shopsController.create )
 
 apiRouter.route( '/shops/:shop_id')
 // this is the show action
-.get( shopController.shop )
+.get( shopsController.shop )
 
 // this is the update action
-.put( shopController.update )
+.put( shopsController.update )
 
 // thi is the destroy function
-.delete( shopController )
+.delete( shopsController )
 
 
 module.exports = apiRouter
