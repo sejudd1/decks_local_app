@@ -3,9 +3,9 @@ var mongoose  = require( 'mongoose' ),
 
 // set up our board Schema
 var BoardSchema = new Schema({
-  brand: String,
-  size: Number,
-  model: String
+    brand: String,
+    size: Number,
+    model: String
 });
 
 
