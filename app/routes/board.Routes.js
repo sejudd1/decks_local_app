@@ -1,7 +1,7 @@
-var express 					= require( 'express' )
-		apiRouter 				= express.Router()
-		boardsController 	= require( '../controllers/boardsController' )
-		Board 						= require( '../models/Board.js' )
+var express 		= require( 'express' )
+    apiRouter 		= express.Router()
+    boardsController 	= require( '../controllers/boardsController' )
+    Board 		= require( '../models/Board.js' )
 
 apiRouter.use(function(req, res, next){
 	//Do Authenication Here!
