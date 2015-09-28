@@ -1,5 +1,5 @@
-var mongoose 	= require('mongoose');
-var Schema 		= mongoose.Schema;
+var mongoose	= require('mongoose'),
+		Schema		= mongoose.Schema;
 
 //set up Shop Schema
 var ShopSchema = new Schema({
