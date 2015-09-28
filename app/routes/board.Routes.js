@@ -1,8 +1,8 @@
-var express = require( 'express' )
-	apiRouter = express.Router()
-	boardsController = require( '../controllers/boardsController' )
-	Board = require( '../models/Board.js' )
-	
+var express 					= require( 'express' )
+		apiRouter 				= express.Router()
+		boardsController 	= require( '../controllers/boardsController' )
+		Board 						= require( '../models/Board.js' )
+
 apiRouter.use(function(req, res, next){
 	//Do Authenication Here!
 	console.log( 'Someone is using our API, we will authenticate them here' )
@@ -17,7 +17,7 @@ apiRouter.route( '/boards' )
 	//for creating a new board
 	.post(boardsController.create)
 
-apiRouter.route( 'boards/:boards_id' )
+apiRouter.route( 'boards/:board_id' )
 	//this is the show action
 	.get(boardsController.show)
 
