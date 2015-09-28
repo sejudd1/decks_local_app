@@ -1,7 +1,7 @@
-var express = require( 'express' ),
-    apiRouter2 = express.Router(),
-    shopsController = require( '../controllers/shopsController.js'),
-    Shop = require( '../models/Shop.js');
+var express           = require( 'express' ),
+    apiRouter2        = express.Router(),
+    shopsController   = require( '../controllers/shopsController.js'),
+    Shop              = require( '../models/Shop.js');
 
 apiRouter.use(function( req, res, next ){
   // DO AUTHENTICATION HERE!
@@ -17,9 +17,9 @@ apiRouter.route( '/shops' )
 // for creating a new shop
 .post( shopsController.create )
 
-apiRouter.route( '/shops/:shop_id')
+apiRouter.route( '/shops/:shop_id' )
 // this is the show action
-.get( shopsController.shop )
+.get( shopsController.show )
 
 // this is the update action
 .put( shopsController.update )
