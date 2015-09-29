@@ -73,7 +73,7 @@ function update( req, res ){
       if ( err ) {
         res.send( err )
       } else {
-        res.json({ message: "shop updated"})
+        res.json({ message: "shop updated" })
       }
     });
 
@@ -82,11 +82,11 @@ function update( req, res ){
 
 function destroy( req, res){
   // delete the shop with the id in the url
-  Shop.remove({ _id: req.params.shop_id }, function(){
+  Shop.remove({ _id: req.params.shop_id }, function( err, shop ){
     if ( err ) {
       res.send( err )
     } else {
-      res.json({ message: "deleted"})
+      res.json({ message: "deleted" })
     }
   });
 }
