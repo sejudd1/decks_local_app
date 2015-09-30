@@ -1,5 +1,7 @@
-var mongoose 	= require('mongoose'),
-      Schema	= mongoose.Schema;
+var mongoose 	= require( 'mongoose' ),
+      Schema	= mongoose.Schema,
+      Board = require('./Board');
+      
 
 //set up Shop Schema
 var ShopSchema = new Schema({
@@ -8,11 +10,11 @@ var ShopSchema = new Schema({
 		city: { type: String, required: true },
 		phonenumber: String,
 		hours: String,
-		boards: [ 'BoardSchema' ]
+		boards: [ Board.schema ]
 
 
 })
 
 
 
-module.exports = mongoose.model('Shop', ShopSchema)
+module.exports = mongoose.model( 'Shop', ShopSchema )

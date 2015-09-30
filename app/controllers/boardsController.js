@@ -2,7 +2,8 @@ var Board = require("../models/Board")
 
 
 function index( req, res){
-	Board.find( function( err, boards){
+	Board.find({ shop_id:req.params.id }, function( err, boards){
+    console.log(boards);
 		if ( err ) {
 			res.send( err )
 		} else {
@@ -18,6 +19,7 @@ function create( req, res ) {
 	board.brand = req.body.brand
 	board.size = req.body.size
 	board.model = req.body.model
+  board.shop_id = req.params.id
   //try to save this board to db
   board.save(function( err ){
     if ( err ) {

@@ -12,7 +12,7 @@ apiRouter.use(function(req, res, next){
 })
 
 //set up index/get for api router
-apiRouter.route( '/boards' )
+apiRouter.route( '/shop/:id/boards' )
 	.get(boardsController.index)
 	//for creating a new board
 	.post(boardsController.create)
