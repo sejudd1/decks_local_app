@@ -6,10 +6,12 @@ var express	= require( 'express' ),
     Shop 	= require( './app/models/Shop.js' ),
     Board	= require( './app/models/Board.js' ),
     apiRouter  	= require( './app/routes/board.Routes.js' ),
-    apiRouter2 	= require( './app/routes/shop.Routes.js' );
+    apiRouter2 	= require( './app/routes/shop.Routes.js' ),
+    port = process.env.PORT || 8080,
+    DB = process.env.DATABASE_URL || 'localhost:27017/decks_local_app';
 
 
-mongoose.connect( 'localhost:27017/decks_local_app' );
+mongoose.connect( DB );
 
 
 //App configuration
@@ -23,5 +25,6 @@ app.use( '/api', apiRouter );
 app.use( '/api', apiRouter2 );
 
 //Run server
-app.listen(8080)
-console.log( 'Magic is happening on port 8080' )
+app.listen(port)
+console.log( 'Magic is happening on port ' + port )
+
